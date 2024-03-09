@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1706.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myShoesDotnetApi", "myShoesDotnetApi\myShoesDotnetApi.csproj", "{142DB610-801E-4673-858C-BD2A5DC62712}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myShoesDotnetApi.Tests", "myShoesDotnetApi.Tests\myShoesDotnetApi.Tests.csproj", "{B1E02E66-B70B-4C44-B791-5F1ED817B349}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{142DB610-801E-4673-858C-BD2A5DC62712}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{142DB610-801E-4673-858C-BD2A5DC62712}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{142DB610-801E-4673-858C-BD2A5DC62712}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1E02E66-B70B-4C44-B791-5F1ED817B349}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1E02E66-B70B-4C44-B791-5F1ED817B349}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1E02E66-B70B-4C44-B791-5F1ED817B349}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1E02E66-B70B-4C44-B791-5F1ED817B349}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
