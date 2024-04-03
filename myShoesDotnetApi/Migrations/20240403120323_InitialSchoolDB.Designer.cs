@@ -12,8 +12,8 @@ using myShoesDotnetApi.Data;
 namespace myShoesDotnetApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240126080818_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20240403120323_InitialSchoolDB")]
+    partial class InitialSchoolDB
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
