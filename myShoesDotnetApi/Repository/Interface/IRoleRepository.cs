@@ -2,8 +2,8 @@
 
 namespace myShoesDotnetApi.Repository.Interface
 {
-    public interface IUserRepository
+    public interface IRoleRepository
     {
-        Task<IEnumerable<User>> GetAllAsync();
+        Task<IEnumerable<Role>> GetAllRolesAsync();
     }
 }

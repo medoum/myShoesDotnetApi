@@ -5,9 +5,8 @@ using myShoesDotnetApi.Models.Enum;
 using myShoesDotnetApi.Repository.Interface;
 
 namespace myShoesDotnetApi.Repository
-{
-	public class ProducRepository
-	{
+{ 
+	
         public class ProductRepository : IProductRepository
         {
             private readonly AppDbContext _dbContext;
@@ -57,5 +56,5 @@ namespace myShoesDotnetApi.Repository
             }
         }
     }
-}
+
 

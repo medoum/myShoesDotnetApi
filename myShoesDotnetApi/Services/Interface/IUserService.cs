@@ -1,6 +1,9 @@
-﻿namespace myShoesDotnetApi.Services.Interface
+﻿using myShoesDotnetApi.Dtos;
+
+namespace myShoesDotnetApi.Services.Interface
 {
-    public interface IUserService
+    public interface IUserService 
     {
+        Task<IEnumerable<UserDto>> GetUsers();
     }
 }

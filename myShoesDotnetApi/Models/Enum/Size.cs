@@ -1,24 +1,25 @@
 ﻿namespace myShoesDotnetApi.Models.Enum
+
 {
     public enum Size
     {
-       S1 = 30,
-       S2 = 31,
-       S3 = 32,
-       S4 = 33,
-       S5 = 34,
-       S6 = 35,
-       S7 = 36,
-       S8 = 37,
-       S9 = 38,
-       S10 = 39,
-       S11 = 40,
-       S12= 41,
-       S13 = 42,
-       S14 = 43,
-       S15 = 44,
-       S16 = 45,
-       S17 = 46
+       Size1 = 30,
+       Size2 = 31,
+       Size3 = 32,
+       Size4 = 33,
+       Size5 = 34,
+       Size6 = 35,
+       Size7 = 36,
+       Size8 = 37,
+       Size9 = 38,
+       Size10 = 39,
+       Size11 = 40,
+       Size12= 41,
+       Size13 = 42,
+       Size14 = 43,
+       Size15 = 44,
+       Size16 = 45,
+       Size17 = 46
 
     }
 }

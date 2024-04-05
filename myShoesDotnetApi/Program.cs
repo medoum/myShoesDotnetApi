@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using myShoesDotnetApi.Data;
 using myShoesDotnetApi.Repository;
 using myShoesDotnetApi.Repository.Interface;
@@ -6,10 +8,12 @@ using myShoesDotnetApi.Services;
 using myShoesDotnetApi.Services.Interface;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
-using static myShoesDotnetApi.Repository.ProducRepository;
+using static myShoesDotnetApi.Repository.ProductRepository;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+var configuration = builder.Configuration;
 
 builder.Services.AddControllers().AddNewtonsoftJson(options =>
 {
@@ -21,6 +25,8 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 
 builder.Services.AddEndpointsApiExplorer();
@@ -56,7 +62,15 @@ else
         options.UseSqlServer(Environment.GetEnvironmentVariable("DB_CONNECTION"));
     });
 }
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
 
+});
 
 var app = builder.Build();
 
