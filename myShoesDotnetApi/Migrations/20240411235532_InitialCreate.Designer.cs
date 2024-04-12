@@ -12,8 +12,8 @@ using myShoesDotnetApi.Data;
 namespace myShoesDotnetApi.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240403150447_IdentityMigration")]
-    partial class IdentityMigration
+    [Migration("20240411235532_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,6 +50,22 @@ namespace myShoesDotnetApi.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "8f0ff405-17bb-4955-ad66-81770b6b5d17",
+                            ConcurrencyStamp = "1",
+                            Name = "Admin",
+                            NormalizedName = "Admin"
+                        },
+                        new
+                        {
+                            Id = "cbdf8c29-f4fa-4025-87f5-e2cf98637a99",
+                            ConcurrencyStamp = "2",
+                            Name = "User",
+                            NormalizedName = "User"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

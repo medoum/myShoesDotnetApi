@@ -51,14 +51,14 @@ namespace myShoesDotnetApi.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "6dd08dd2-effb-4244-82fa-e4e8446cc31a",
+                            Id = "8f0ff405-17bb-4955-ad66-81770b6b5d17",
                             ConcurrencyStamp = "1",
                             Name = "Admin",
                             NormalizedName = "Admin"
                         },
                         new
                         {
-                            Id = "72c45983-51d1-4df9-adcd-f8012d87604a",
+                            Id = "cbdf8c29-f4fa-4025-87f5-e2cf98637a99",
                             ConcurrencyStamp = "2",
                             Name = "User",
                             NormalizedName = "User"
